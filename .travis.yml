@@ -2,10 +2,10 @@ language: cpp
 
 os:
   - linux
+  - osx
 
 compiler:
-  - gcc
   - clang
 
-script: 
+script:
   - make -C cimgui
