@@ -6,14 +6,6 @@ compiler:
 script:
 - make -C cimgui
 
-before_deploy:
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-        pwd
-        ls
-        echo "$TRAVIS_BUILD_DIR"
-        pwd cimgui
-    fi
-
 deploy:
   provider: releases
   api_key:
