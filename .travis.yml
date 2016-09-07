@@ -9,3 +9,11 @@ compiler:
 
 script:
   - make -C cimgui
+
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "FILE cimgui/cimgui.dylib"
+  skip_cleanup: true
+  on:
+    tags: true
