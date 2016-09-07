@@ -1,13 +1,7 @@
 language: cpp
 
-env: DEPLOY_FILE="Makefile"
-
-matrix:
-  include:
-    - os: linux
-      env: DEPLOY_FILE=cimgui.so
-    - os: osx
-      env: DEPLOY_FILE=cimgui.dylib
+os:
+- osx
 
 compiler:
 - clang
@@ -20,6 +14,7 @@ deploy:
   api_key:
     secure: M7tDY+y5tvcbgSiCz3wYZdxHH0Jc07KtdtLIpPfjP+QptUS3C7OQDn9ZnSZQt6ibWQ9ukQKnmf2uf6ww+X7BbN3m2lw73u0NuR0kffU5qEwgAyDNF36feaPv0EA5I0L5RySmi28layWmhsARIbpIeBoVFUCwr2mqlAjY8+IH3RTW4t8poC2L1zdBG44xC3MYIszaYKrAEjXkHyDMjzansKQohfkt/oXaKyUaK0LaAaWClB+QMl30LQJFzH69Sthy1Jy8J2Xc6OmLd6gPp3VwBJff4vTxBnQyXem8ILAqLv6ktgcg1JfczWlQEeBaA3c30XeSK/bJrWcBDm1M937BNS4IEJQVboyWOFExw5t1UJ+vTYZbGdtgKe8HUkr1H1CIDpeKDGyM3xLNxDhwOsRJoRrHNGl8BoLjYEqPoF5Cgiy/nv46olA3Ymu9VGDAgsQQrkzvZLNCZ/f553gpzlqqowHcVKJuHkOZr84knHDPIfu7I6bpByEm3F3r7fH6OScJxh/OQdo/woiplN/OH4y6I2YrWosNHfGaKP+q6cBpJnVG1y5/KQwCq9B42Y3kbQxowILf94huvQafz9czWtwOZwXnwzNDuLxpmQ4Wpcq6Y1UcCd1gnr3VpatWKraSORg0I12+E1rZOEqvfT5THqpD54WoNO9ET8VUyUanMlGcMJo=
   skip_cleanup: true
-  file: cimgui/$DEPLOY_FILE
+  file: cimgui/cimgui.dylib
   on:
-    tags: true
+    repo: just-the-damn-libs/cimgui
+    branch: jtdl-v1.49
