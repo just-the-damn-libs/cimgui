@@ -1,8 +1,11 @@
 language: cpp
+
 os:
 - osx
+
 compiler:
 - clang
+
 script:
 - make -C cimgui
 
