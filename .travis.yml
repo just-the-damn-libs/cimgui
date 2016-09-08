@@ -2,10 +2,12 @@ language: cpp
 
 os:
 - osx
-  env: DEPLOY_FILE=cimgui.dylib
+  env:
+  - DEPLOY_FILE=cimgui.dylib
 
 - linux
-  env: DEPLOY_FILE=cimgui.so
+  env:
+  - DEPLOY_FILE=cimgui.so
 
 compiler:
 - clang
