@@ -16,4 +16,5 @@ deploy:
   skip_cleanup: true
   file: cimgui/cimgui.dylib
   on:
-    tags: true
+    repo: just-the-damn-libs/cimgui
+    branch: jtdl-v1.49
