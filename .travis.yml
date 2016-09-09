@@ -1,16 +1,13 @@
 language: cpp
 
+env: DEPLOY_FILE="Makefile"
+
 matrix:
   include:
     - os: linux
       env: DEPLOY_FILE=cimgui.so
     - os: osx
       env: DEPLOY_FILE=cimgui.dylib
-  exclude:
-    - os: linux
-      env: DEPLOY_FILE=""
-    - os: osx
-      env: DEPLOY_FILE=""
 
 compiler:
 - clang
