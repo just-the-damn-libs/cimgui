@@ -6,11 +6,11 @@ matrix:
       env: DEPLOY_FILE=cimgui.so
     - os: osx
       env: DEPLOY_FILE=cimgui.dylib
-  exclude
+  exclude:
     - os: linux
-      env: ""
+      env: DEPLOY_FILE=""
     - os: osx
-      env: ""
+      env: DEPLOY_FILE=""
 
 compiler:
 - clang
